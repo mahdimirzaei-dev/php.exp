@@ -8,8 +8,8 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="/" aria-current="page" class="<?= isUrl('/') ? 'bg-gray-950/50 text-white' : 'text-gray-300' ?> block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white">Home</a>
-                        <a href="/about.php" class="<?= isUrl('/about.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300' ?> block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white">About Us</a>
-                        <a href="/contact.php" class="<?= isUrl('/contact.php') ? 'bg-gray-950/50 text-white' : 'text-gray-300' ?> block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white">Contact Us</a>
+                        <a href="/about" class="<?= isUrl('/about') ? 'bg-gray-950/50 text-white' : 'text-gray-300' ?> block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white">About Us</a>
+                        <a href="/contact" class="<?= isUrl('/contact') ? 'bg-gray-950/50 text-white' : 'text-gray-300' ?> block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white">Contact Us</a>
                     </div>
                 </div>
             </div>
