@@ -4,5 +4,8 @@ require_once "functions.php";
 require_once "router.php";
 require_once "Database.php";
 
-$db = new Database();
-$users = $db->query("SELECT * FROM `php_exp`.`users`")->fetchAll(PDO::FETCH_ASSOC);
+$config = require_once "config.php";
+
+$db = new Database($config['database']);
+
+$users = $db->query("SELECT * FROM `php_exp`.`users`")->fetchAll();
