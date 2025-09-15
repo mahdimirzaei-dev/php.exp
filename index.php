@@ -8,4 +8,5 @@ $config = require_once "config.php";
 
 $db = new Database($config['database']);
 
-$users = $db->query("SELECT * FROM `php_exp`.`users`")->fetchAll();
+$id = $_GET['id'];
+$users = $db->query("SELECT * FROM `php_exp`.`users` WHERE `id` = :id", [':id' => $id])->fetchAll();
