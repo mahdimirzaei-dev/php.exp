@@ -19,9 +19,9 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <a href="/" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Home</a>
+                                <a href="/" aria-current="page" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Home</a>
                                 <a href="/about.php" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About Us</a>
-                                <a href="/contact.php" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact Us</a>
+                                <a href="/contact.php" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -102,12 +102,12 @@
 
         <header class="relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-white">Home</h1>
+                <h1 class="text-3xl font-bold tracking-tight text-white">Contact Us</h1>
             </div>
         </header>
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <p class="text-white">Home pages.</p>
+                <p class="text-white">Contact page.</p>
             </div>
         </main>
     </div>
