@@ -7,14 +7,8 @@ $id = $_GET['id'];
 $heading = "Note ({$id})";
 $currentUserID = 1;
 
-$note = $db->query('SELECT * FROM `php_exp`.`notes` WHERE `id` = :id', [':id' => $id])->fetch();
+$note = $db->query('SELECT * FROM `php_exp`.`notes` WHERE `id` = :id', [':id' => $id])->findOrFail();
 
-if (!$note) {
-    abort();
-}
-
-if ($note['user_id'] !== $currentUserID) {
-    abort(Response::FORBIDDEN);
-}
+authorize($note['user_id'] === $currentUserID);
 
 require_once "views/note.view.php";

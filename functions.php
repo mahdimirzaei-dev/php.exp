@@ -15,3 +15,10 @@ function isUrl($url)
 {
     return $_SERVER['REQUEST_URI'] === $url;
 }
+
+function authorize($cond, $status = Response::FORBIDDEN)
+{
+    if (!$cond) {
+        abort($status);
+    }
+}
