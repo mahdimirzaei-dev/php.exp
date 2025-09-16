@@ -11,4 +11,4 @@ $note = $db->query('SELECT * FROM `php_exp`.`notes` WHERE `id` = :id', [':id' =>
 
 authorize($note['user_id'] === $currentUserID);
 
-require_once "views/note.view.php";
+require_once "views/notes/show.view.php";
