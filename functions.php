@@ -22,3 +22,20 @@ function authorize($cond, $status = Response::FORBIDDEN)
         abort($status);
     }
 }
+
+function basePath($path)
+{
+    return BASE_PATH . $path;
+}
+
+function assets($path)
+{
+    return 'http://localhost:8000/assets/' . $path;
+}
+
+function view($path, $attributes = [])
+{
+    extract($attributes);
+
+    require basePath('views/' . $path);
+}

@@ -1,14 +1,10 @@
 <?php
 
-require_once "Validator.php";
-
-$config = require_once "config.php";
+$config = require_once basePath("config.php");
 $db = new Database($config['database']);
-
-$heading = "Create Note";
+$errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $errors = [];
 
     if (!Validator::string($_POST['title'], 1, 16)) {
         $errors['title'] = 'please enter valid size of title (minimum: 1, maximum: 16 character)';
@@ -29,4 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require_once "views/notes/create.view.php";
+view("notes/create.view.php", [
+    'heading' => 'Create Note',
+    'errors' => $errors
+]);
