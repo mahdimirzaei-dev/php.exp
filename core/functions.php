@@ -1,5 +1,7 @@
 <?php
 
+use core\Response;
+
 // dump the variable and die.
 function dd($var)
 {
