@@ -4,7 +4,7 @@
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <form method="POST">
+        <form action="/notes" method="POST">
             <div class="mb-4">
                 <label for="title" class="block text-sm text-gray-300 font-medium mb-1">Title</label>
                 <input type="text" name="title" id="title" class="w-full border-2 border-sky-200 rounded px-2 py-1 text-white focus:outline-0 focus:border-sky-500" value="<?= $_POST['title'] ?? '' ?>">
