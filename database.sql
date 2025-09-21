@@ -3,6 +3,7 @@ CREATE TABLE `php_exp`.`users`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `username` VARCHAR(256) NOT NULL,
     `email` VARCHAR(256) NOT NULL UNIQUE,
+    `password` VARCHAR(256) NOT NULL,
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
     PRIMARY KEY(`id`)
@@ -21,13 +22,15 @@ CREATE TABLE `php_exp`.`notes`(
 ) DEFAULT CHARSET utf8mb4 DEFAULT COLLATE utf8mb4_general_ci;
 
 -- insert users
-INSERT INTO `php_exp`.`users`(`username`, `email`)
+INSERT INTO `php_exp`.`users`(`username`, `email`, `password`)
 VALUES(
     "mahdimirzaei-dev",
-    "mahdimirzaei.dev@gmail.com"
+    "mahdimirzaei.dev@gmail.com",
+    "password"
 ),(
     "sajadspeed",
-    "sajadspeed@gmail.com"
+    "sajadspeed@gmail.com",
+    "password"
 );
 
 -- insert notes
