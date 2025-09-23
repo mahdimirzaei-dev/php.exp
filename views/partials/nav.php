@@ -36,11 +36,17 @@
                             <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Your profile</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Settings</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Sign out</a>
+                                <form action="/session" method="post">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="w-full block px-4 py-2 text-left text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Logout</button>
+                                </form>
                             </el-menu>
                         </el-dropdown>
                     <?php else: ?>
-                        <a href="/register" class="text-sky-500 hover:underline">Register</a>
+                        <div class="flex gap-x-2">
+                            <a href="/register" class="text-sky-500 hover:underline">Register</a>
+                            <a href="/login" class="text-sky-500 hover:underline">Login</a>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
