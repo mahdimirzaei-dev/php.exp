@@ -1,0 +1,27 @@
+{
+  "name": "mahdi/php.exp",
+  "authors": [
+    {
+      "name": "mahdimirzaei-dev",
+      "email": "mahdimirzaei.dev@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/collections": "^12.31"
+  },
+  "autoload": {
+    "psr-4": {
+      "core\\": "core/",
+      "http\\": "http/",
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.8"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
